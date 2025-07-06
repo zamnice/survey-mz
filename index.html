@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survei Interaktif</title>
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">Suara Anda<span class="gold-accent">.id</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#">Tentang Kami</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Kontak</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero">
+            <div class="container">
+                <h1>Suara Anda Penting! <br>Ikuti Survei Kami Sekarang.</h1>
+                <p>Bagikan pandangan Anda dan bantu kami membuat perubahan positif.</p>
+                <button class="btn-primary" onclick="startSurvey()">Mulai Survei</button>
+            </div>
+        </section>
+
+        <section id="survey-form" style="display: none;">
+            <div class="container">
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0%;"></div>
+                </div>
+                <form id="main-survey-form">
+                    <div class="survey-question active" data-question="1">
+                        <h2>Pertanyaan 1: Bagaimana pendapat Anda tentang layanan kami?</h2>
+                        <div class="options">
+                            <label><input type="radio" name="q1" value="Sangat Baik"> Sangat Baik</label>
+                            <label><input type="radio" name="q1" value="Baik"> Baik</label>
+                            <label><input type="radio" name="q1" value="Cukup"> Cukup</label>
+                            <label><input type="radio" name="q1" value="Kurang"> Kurang</label>
+                        </div>
+                        <button type="button" class="btn-next">Selanjutnya</button>
+                    </div>
+
+                    <div class="survey-question" data-question="2">
+                        <h2>Pertanyaan 2: Apa yang perlu ditingkatkan dari layanan kami?</h2>
+                        <textarea name="q2" rows="5" placeholder="Tuliskan saran Anda..."></textarea>
+                        <div class="nav-buttons">
+                            <button type="button" class="btn-prev">Sebelumnya</button>
+                            <button type="button" class="btn-next">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <div class="survey-question" data-question="final">
+                        <h2>Terima Kasih atas partisipasi Anda!</h2>
+                        <p>Klik kirim untuk menyelesaikan survei.</p>
+                        <div class="nav-buttons">
+                            <button type="button" class="btn-prev">Sebelumnya</button>
+                            <button type="submit" class="btn-submit">Kirim Survei</button>
+                        </div>
+                    </div>
+                </form>
+                <div id="thank-you-message" style="display: none;">
+                    <h2>Survei Selesai!</h2>
+                    <p>Terima kasih banyak atas waktu dan kontribusi Anda. Data Anda telah berhasil direkam.</p>
+                    <button class="btn-primary" onclick="location.reload()">Kembali ke Beranda</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Suara Anda. Semua Hak Cipta Dilindungi.</p>
+            <div class="social-icons">
+                </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
